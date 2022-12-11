@@ -27,11 +27,11 @@ ul li.done {
     text-decoration: line-through;
   }
 .img{
+    margin-top: 320px;
     background-image: url(purplebg.png);
     background-size: cover;
     background-repeat: no-repeat ;
     height: 290px;
-margin-top: 320px;
 }
 .container{
     display: flex;
@@ -57,7 +57,6 @@ margin-top: 320px;
     outline: none;
     border: 1px solid #DFDFDF;
     border-radius: 8px;
-
 }
 #add-btn{
     padding: 0 40px;
@@ -76,11 +75,11 @@ margin-top: 320px;
 footer{
 position: relative;
 }
-@media only screen and (max-width:1440px){
+/* @media only screen and (max-width:1440px){
     .img{
         margin-top: 500px;
     }
-}
+} */
 @media only screen and (max-width:1366px){
     .img{
         margin-top: 400px;
