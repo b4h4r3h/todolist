@@ -13,8 +13,8 @@
           <div class="content">
             <input id="input" type="text" placeholder="Please enter your task" />
             <button id="add-btn" onclick="addTask()">Add Task</button>
-            <ul id="task-list"></ul>
           </div>
+          <ul id="task-list"></ul>
         </div>
       </div>
       <footer>
@@ -34,27 +34,31 @@
       if (inputElement.value.length > 0) {
         var taskList = document.getElementById("task-list");
         var taskItems = document.createElement("li");
-        taskList.appendChild(taskItems);
         taskItems.innerHTML = inputElement.value;
         inputElement.value = "";
         var delBtn = document.createElement("button");
-        taskItems.appendChild(delBtn);
         delBtn.innerHTML = "Delete";
         var taskItemStyle = taskItems.style;
-        taskItemStyle.border = "1px solid #5c5cff"
-        taskItemStyle.padding = "8px 12px"
-        taskItemStyle.marginRight = "12px"
-        taskItemStyle.borderRadius = "6px"
+        taskItems.classList= "fade-in"
+        // taskItemStyle.opacity = "0"
+        // taskItemStyle.transition = "all 2s"
+        // taskItemStyle.border = "1px solid #5c5cff"
+        // taskItemStyle.padding = "8px 12px"
+        // taskItemStyle.marginRight = "12px"
+        // taskItemStyle.borderRadius = "6px"
         var delBtnStyle = delBtn.style;
-        delBtnStyle.background = "#FFECEC";
-        delBtnStyle.border = "none";
-        delBtnStyle.color = "#DF1010";
-        delBtnStyle.marginLeft = "8px"
-        delBtnStyle.padding = "4px 12px"
-        delBtnStyle.borderRadius = "4px"
-        delBtnStyle.fontFamily = "Roboto";
-        delBtnStyle.fontWeight = "400";
-        delBtnStyle.fontSize = "14px";
+        // delBtnStyle.background = "#FFECEC";
+        // delBtnStyle.border = "none";
+        // delBtnStyle.color = "#DF1010";
+        // delBtnStyle.marginLeft = "8px"
+        // delBtnStyle.padding = "4px 12px"
+        // delBtnStyle.borderRadius = "4px"
+        // delBtnStyle.fontFamily = "Roboto";
+        // delBtnStyle.fontWeight = "400";
+        // delBtnStyle.fontSize = "14px";
+        taskItems.appendChild(delBtn);
+        taskList.appendChild(taskItems);
+        // taskItemStyle.opacity = "1";
         delBtn.addEventListener("click", delTask);
         function delTask() {
             taskItems.remove();
